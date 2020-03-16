@@ -12,6 +12,7 @@ class App extends Component {
             <div className="App">
                 <img src={require('./style/imgs/logo512.png')} alt="xx"/>
               <Button type="primary" onClick={() => handleClick('typescript')}>Button</Button>
+                <div></div>
             </div>
         );
     }
