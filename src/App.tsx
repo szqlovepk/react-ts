@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import { Button } from 'antd';
 import './App.css';
 
+const handleClick = (person?: string) => {
+    alert(`hello ${person}`);
+}
+
 class App extends Component {
     render() {
         return (
             <div className="App">
-              <Button type="primary">Button</Button>
+                <img src="" alt="xx"/>
+              <Button type="primary" onClick={() => handleClick('typescript')}>Button</Button>
             </div>
         );
     }
