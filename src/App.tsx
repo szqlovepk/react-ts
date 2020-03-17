@@ -10,8 +10,8 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <img src={require('./style/imgs/logo512.png')} alt="xx"/>
-              <Button type="primary" onClick={() => handleClick('typescript')}>Button</Button>
+                <img src={require('./style/imgs/logo512.png')} alt="xx" />
+                <Button type="primary" onClick={() => handleClick('typescript')}>Button</Button>
                 <div></div>
             </div>
         );
