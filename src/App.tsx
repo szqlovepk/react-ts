@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import SiderCustom from './component/layout/SiderCustom';
 import { Layout } from 'antd';
 import './App.css';
 
-const { Header, Sider, Content, Footer } = Layout;
+const { Header, Content, Footer } = Layout;
 
 class App extends Component {
     render() {
@@ -10,7 +11,7 @@ class App extends Component {
             <Layout className="app__layout__container">
                 <Header>header</Header>
                 <Layout>
-                    <Sider theme="light">left sidebar</Sider>
+                    <SiderCustom />
                     <Layout>
                         <Content>main content</Content>
                         <Footer>footer</Footer>
