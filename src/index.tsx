@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+//import './index.css';
 //import App from './App';
+import './style/index.scss';
 import Page from './Page';
 import * as serviceWorker from './serviceWorker';
 import 'animate.css';
