@@ -4,7 +4,7 @@
  * File Created: 2020-04-03 17:27:08
  * Author: szq
  * ------
- * Last Modified: 2020-04-03 19:06:24
+ * Last Modified: 2020-04-08 17:16:47
  * Modified By: szq at <1056628965@qq.com>
  * ------
  * Copyright 2020 - Present, Your Company
@@ -33,10 +33,15 @@ interface BaseButtonProps {
   href?: string;
 }
 
-const Button: React.FC<BaseButtonProps> = props => {
-  const { btnType, disabled, size, children, href } = props;
+type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLElement>
+type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLElement>
+//Partial将接收泛型的接口内的属性都变成可选
+export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>
 
-  const classes = classNames("btn", {
+const Button: React.FC<ButtonProps> = props => {
+  const { btnType, disabled, size, children, href, className, ...restProps } = props;
+
+  const classes = classNames("btn", className, {
     [`btn-${btnType}`]: btnType,
     [`btn-${size}`]: size,
     disabled: btnType === ButtonType.Link && disabled
@@ -44,13 +49,13 @@ const Button: React.FC<BaseButtonProps> = props => {
 
   if (btnType === ButtonType.Link && href) {
     return (
-      <a className={classes} href={href}>
+      <a className={classes} href={href} {...restProps}>
         {children}
       </a>
     );
   } else {
     return (
-      <button className={classes} disabled={disabled}>
+      <button className={classes} disabled={disabled} {...restProps}>
         {children}
       </button>
     );

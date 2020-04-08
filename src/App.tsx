@@ -21,10 +21,10 @@ class App extends Component {
                             <code>test code</code>
                             <br />
                             <Button disabled> disabled </Button>
-                            <Button btnType={ButtonType.Default} size={ButtonSize.Large}> default </Button>
+                            <Button btnType={ButtonType.Default} size={ButtonSize.Large} autoFocus onClick={e => {e.preventDefault(); alert('123');}}> default </Button>
                             <Button btnType={ButtonType.Primary} size={ButtonSize.Large}> parimary </Button>
                             <Button btnType={ButtonType.Danger} size={ButtonSize.Small}> danger </Button>
-                            <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large}> link button </Button>
+                            <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large} target="_blank"> link button </Button>
                             <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large} disabled> link disabled </Button>
                         </Content>
                         <Footer>footer</Footer>
