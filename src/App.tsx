@@ -19,10 +19,13 @@ class App extends Component {
                             <h2>Hello World</h2>
                             <h3>Hello World</h3>
                             <code>test code</code>
-                            <Button disabled> hello </Button>
-                            <Button btnType={ButtonType.Primary} size={ButtonSize.Large}> hello </Button>
-                            <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large}> hello </Button>
-                            <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large} disabled> hello </Button>
+                            <br />
+                            <Button disabled> disabled </Button>
+                            <Button btnType={ButtonType.Default} size={ButtonSize.Large}> default </Button>
+                            <Button btnType={ButtonType.Primary} size={ButtonSize.Large}> parimary </Button>
+                            <Button btnType={ButtonType.Danger} size={ButtonSize.Small}> danger </Button>
+                            <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large}> link button </Button>
+                            <Button btnType={ButtonType.Link} href="http://www.baidu.com" size={ButtonSize.Large} disabled> link disabled </Button>
                         </Content>
                         <Footer>footer</Footer>
                     </Layout>
